@@ -1,1 +1,98 @@
-<!-- Warehouse Project Card -->\n<div class="project-card">\n    <h3>Warehouse Project</h3>\n    <img src="warehouse_project_image.jpg" alt="Warehouse Project Image">\n    <p>Description of the warehouse project.</p>\n    <button onclick="openGallery()">View Gallery</button>\n</div>\n\n<!-- Warehouse Gallery Modal -->\n<div id="warehouseModal" class="modal">\n    <span class="close" onclick="closeGallery()">&times;</span>\n    <div class="modal-content">\n        <div class="modal-header">\n            <h2>Warehouse Gallery</h2>\n        </div>\n        <div class="modal-body">\n            <img src="warehouse_image1.jpg" alt="Warehouse Image 1">\n            <img src="warehouse_image2.jpg" alt="Warehouse Image 2">\n            <img src="warehouse_image3.jpg" alt="Warehouse Image 3">\n            <!-- Additional images can be added here -->\n        </div>\n    </div>\n</div>\n\n<script>\nfunction openGallery() {\n    document.getElementById('warehouseModal').style.display = 'block';\n}\\nfunction closeGallery() {\n    document.getElementById('warehouseModal').style.display = 'none';\n}\n</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your one-stop solution for all architectural needs.</p>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Detail about yourself goes here...</p>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>Skill 1</li>
+            <li>Skill 2</li>
+            <li>Skill 3</li>
+        </ul>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>Your education details here...</p>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Warehouse Structural Design</h3>
+                <p>Details about the project...</p>
+                <img src="images/warehouse-structural-design.jpg" alt="Warehouse Structural Design">
+            </div>
+            <!-- Other project cards go here -->
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section id="awards">
+        <h2>Awards</h2>
+        <p>Awards received...</p>
+    </section>
+    
+    <!-- QR Code Section -->
+    <section id="qr-code">
+        <h2>QR Code</h2>
+        <img src="images/qr-code.png" alt="QR Code">
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Kamva692. All rights reserved.</p>
+    </footer>
+    
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="modal">
+        <span class="close">&times;</span>
+        <img src="images/certificate.jpg" alt="Certificate">
+    </div>
+    
+    <!-- Warehouse Gallery Modal -->
+    <div id="warehouse-gallery-modal" class="modal">
+        <span class="close">&times;</span>
+        <div class="gallery">
+            <img src="images/gallery1.jpg" alt="Warehouse Image 1">
+            <img src="images/gallery2.jpg" alt="Warehouse Image 2">
+            <img src="images/gallery3.jpg" alt="Warehouse Image 3">
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
