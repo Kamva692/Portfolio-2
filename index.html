@@ -1,18 +1,1 @@
-<div class="projects-grid">
-    <div class="project-card">
-        <h3>Warehouse Project</h3>
-        <p>Description of the warehouse project goes here.</p>
-        <button onclick="openModal('warehouseGallery')">View Drawings</button>
-    </div>
-    <!-- Existing project cards will remain here -->
-</div>
-
-<!-- Warehouse Gallery Modal -->
-<div id="warehouseGallery" class="modal">
-    <span class="close" onclick="closeModal('warehouseGallery')">&times;</span>
-    <div class="modal-content">
-        <img src="path/to/warehouse-image1.jpg" alt="Warehouse Image 1">
-        <img src="path/to/warehouse-image2.jpg" alt="Warehouse Image 2">
-        <!-- Add more images as needed -->
-    </div>
-</div>
+<!-- Warehouse Project Card -->\n<div class="project-card">\n    <h3>Warehouse Project</h3>\n    <img src="warehouse_project_image.jpg" alt="Warehouse Project Image">\n    <p>Description of the warehouse project.</p>\n    <button onclick="openGallery()">View Gallery</button>\n</div>\n\n<!-- Warehouse Gallery Modal -->\n<div id="warehouseModal" class="modal">\n    <span class="close" onclick="closeGallery()">&times;</span>\n    <div class="modal-content">\n        <div class="modal-header">\n            <h2>Warehouse Gallery</h2>\n        </div>\n        <div class="modal-body">\n            <img src="warehouse_image1.jpg" alt="Warehouse Image 1">\n            <img src="warehouse_image2.jpg" alt="Warehouse Image 2">\n            <img src="warehouse_image3.jpg" alt="Warehouse Image 3">\n            <!-- Additional images can be added here -->\n        </div>\n    </div>\n</div>\n\n<script>\nfunction openGallery() {\n    document.getElementById('warehouseModal').style.display = 'block';\n}\\nfunction closeGallery() {\n    document.getElementById('warehouseModal').style.display = 'none';\n}\n</script>
