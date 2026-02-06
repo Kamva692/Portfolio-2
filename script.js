@@ -1,11 +1,8 @@
+
 function openWarehouseGallery() {
-    // Code to open the warehouse image gallery modal
-    const modal = document.getElementById('warehouseGalleryModal');
-    modal.style.display = 'block';
+    // Code to display the warehouse gallery modal
 }
 
 function closeWarehouseGallery() {
-    // Code to close the warehouse image gallery modal
-    const modal = document.getElementById('warehouseGalleryModal');
-    modal.style.display = 'none';
+    // Code to close the warehouse gallery modal
 }
