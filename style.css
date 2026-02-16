@@ -1,4 +1,4 @@
-/* =========================
+   /* =========================
    PROFESSIONAL CIVIL THEME
 ========================= */
 :root {
@@ -167,263 +167,116 @@ h1, h2, h3, h4 {
 .skill-progress {
     height: 6px;
     background: var(--primary);
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--primary);
 }
 
 /* =========================
-   HERO SECTION
-========================= */
-.hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #008080, #004c4c);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.profile-photo img {
-    border-radius: 50%;
-    width: 180px;
-    border: 4px solid white;
-    margin-bottom: 20px;
-}
-
-.hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.hero-summary {
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin: 10px;
-    transition: 0.3s ease;
-    font-weight: 600;
-}
-
-.btn-primary {
-    background: white;
-    color: var(--primary);
-}
-
-.btn-secondary {
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--primary);
-    color: white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary);
-}
-
-.social-links a {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 10px;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    transform: scale(1.2);
-}
-
-/* =========================
-   ABOUT SECTION
-========================= */
-.about {
-    padding: 80px 0;
-    background: white;
-}
-
-.about-content {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-highlights li {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.language-tag {
-    background: var(--primary);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin: 5px;
-    display: inline-block;
-}
-
-/* =========================
-   SKILLS
-========================= */
-.skills {
-    padding: 80px 0;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
-
-.skill-category {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-.skill-bar {
-    background: #eee;
-    border-radius: 20px;
-    height: 8px;
-    margin-top: 5px;
-}
-
-.skill-progress {
-    height: 8px;
-    background: var(--primary);
-    border-radius: 20px;
-}
-
-/* =========================
-   PROJECTS
+   PROJECTS (NO FLOAT)
 ========================= */
 .projects {
     padding: 80px 0;
-    background: white;
+    background: var(--white);
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
 }
 
 .project-card {
-    background: var(--light);
-    border-radius: 10px;
-    overflow: hidden;
-    t
-border-radius:50%;
-animation:spin 1s linear infinite;
+    background: var(--white);
+    border: 1px solid #e0e6ed;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes spin{
-100%{transform:rotate(360deg);}
+/* Removed floating animation completely */
+.project-card:hover {
+    transform: none;
 }
 
-.navbar{
-display:flex;
-justify-content:space-between;
-padding:20px 10%;
-position:fixed;
-width:100%;
-z-index:100;
+.project-image img {
+    width: 100%;
+    display: block;
 }
 
-.nav-links{
-display:flex;
-list-style:none;
+.project-content {
+    padding: 25px;
 }
 
-.nav-links li{
-margin-left:20px;
+.project-content h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
 }
 
-.nav-links a{
-color:white;
-text-decoration:none;
+.tech-tag {
+    background: var(--accent);
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    margin-right: 5px;
 }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:0 20px;
+.btn-small {
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    text-decoration: none;
 }
 
-.section{
-padding:100px 10%;
-text-align:center;
-margin:50px auto;
-border-radius:20px;
+.btn-small:hover {
+    background: var(--primary);
+    color: white;
 }
 
-.glass{
-background:rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-box-shadow:0 8px 32px rgba(0,0,0,0.3);
+/* =========================
+   CONTACT
+========================= */
+.contact {
+    padding: 80px 0;
 }
 
-.slider{
-overflow:hidden;
-max-width:800px;
-margin:30px auto;
+.contact-content {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
-.slides{
-display:flex;
-width:300%;
-animation:slide 12s infinite;
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #d0d7de;
+    padding: 10px;
+    width: 100%;
 }
 
-.slides img{
-width:100%;
-border-radius:15px;
+.contact-form button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
 }
 
-@keyframes slide{
-0%{transform:translateX(0);}
-33%{transform:translateX(-100%);}
-66%{transform:translateX(-200%);}
-100%{transform:translateX(0);}
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background: var(--primary);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
 }
 
-.ai-button{
-position:fixed;
-bottom:30px;
-right:30px;
-background:#00b3b3;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:24px;
-cursor:pointer;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width: 768px) {
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
 }
