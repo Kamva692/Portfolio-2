@@ -1,29 +1,41 @@
-// ==========================
-// Smooth Scroll Highlight
-// ==========================
+/* ==========================
+   SMOOTH SECTION SCROLL
+========================== */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({ behavior: "smooth" });
+
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
     });
 });
 
-// ==========================
-// Modal System
-// ==========================
-function openModal(cert) {
-    const modal = document.getElementById("certificateModal");
-    const body = document.getElementById("modalBody");
 
-    let content = `
-        <h2>Certificate Preview</h2>
-        <p>This is the certificate for: <strong>${cert}</strong></p>
-        <img src="https://via.placeholder.com/500x300/008080/ffffff?text=${cert}" 
-             style="width:100%; margin-top:20px; border-radius:10px;">
+/* ==========================
+   CERTIFICATE MODAL SYSTEM
+========================== */
+
+function openModal(certName) {
+    const modal = document.getElementById("certificateModal");
+    const modalBody = document.getElementById("modalBody");
+
+    modalBody.innerHTML = `
+        <h2 style="margin-bottom:15px; color:#1f3a5f;">Certificate Details</h2>
+        <p style="margin-bottom:20px;">
+            Certificate reference: <strong>${certName}</strong>
+        </p>
+        <img 
+            src="https://via.placeholder.com/600x350/f4f6f8/1f3a5f?text=${certName}" 
+            style="width:100%; border:1px solid #e0e6ed;"
+            alt="Certificate Preview"
+        >
     `;
 
-    body.innerHTML = content;
     modal.style.display = "flex";
 }
 
@@ -31,27 +43,43 @@ function closeModal() {
     document.getElementById("certificateModal").style.display = "none";
 }
 
-window.onclick = function(e) {
+window.addEventListener("click", function (e) {
     const modal = document.getElementById("certificateModal");
     if (e.target === modal) {
         modal.style.display = "none";
     }
-};
+});
 
-// ==========================
-// Contact Form Alert
-// ==========================
+
+/* ==========================
+   CONTACT FORM HANDLER
+========================== */
+
 document.querySelector(".contact-form")
-    .addEventListener("submit", function(e) {
+    .addEventListener("submit", function (e) {
         e.preventDefault();
-        alert("Thank you! Your message has been sent successfully.");
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            alert("Please complete all required fields.");
+            return;
+        }
+
+        alert("Thank you for your message. I will respond as soon as possible.");
         this.reset();
     });
 
-// ==========================
-// QR URL Auto Display
-// ==========================
-window.addEventListener("DOMContentLoaded", () => {
+
+/* ==========================
+   QR SECTION - AUTO WEBSITE URL
+========================== */
+
+window.addEventListener("DOMContentLoaded", function () {
     const urlText = document.getElementById("websiteUrl");
-    urlText.textContent = window.location.href;
+    if (urlText) {
+        urlText.textContent = window.location.href;
+    }
 });
