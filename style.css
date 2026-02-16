@@ -1,11 +1,12 @@
 /* =========================
-   GLOBAL STYLES
+   PROFESSIONAL CIVIL THEME
 ========================= */
 :root {
-    --primary: #008080;
-    --dark: #1f1f1f;
-    --light: #f9f9f9;
-    --gray: #777;
+    --primary: #1f3a5f;       /* Deep steel blue */
+    --secondary: #6c757d;     /* Professional grey */
+    --accent: #b0b8c1;        /* Light steel */
+    --light: #f4f6f8;
+    --dark: #1c1c1c;
     --white: #ffffff;
 }
 
@@ -17,23 +18,155 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: var(--dark);
     background: var(--light);
-    scroll-behavior: smooth;
+    color: var(--dark);
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1150px;
     margin: auto;
 }
 
 .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    background: var(--primary);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 170px;
+    border-radius: 50%;
+    border: 4px solid var(--white);
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #dbe2ea;
+}
+
+.hero-summary {
+    max-width: 650px;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px 5px;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary);
+    border: 1px solid white;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.about-content {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-highlights li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.language-tag {
+    background: var(--accent);
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills {
+    padding: 80px 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.skill-category {
+    background: var(--white);
+    padding: 30px;
+    border: 1px solid #e0e6ed;
+}
+
+.skill-bar {
+    background: #e0e6ed;
+    height: 6px;
+    margin-top: 6px;
+}
+
+.skill-progress {
+    height: 6px;
+    background: var(--primary);
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
