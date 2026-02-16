@@ -3,129 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Lizalise Buwa - Civil Engineering Graduate Portfolio and CV">
 <title>Lizalise Buwa | Civil Engineering Graduate</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 
 <body>
 
-<section class="hero">
+<!-- Loading Screen -->
+<div id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Particles Background -->
+<div id="particles-js"></div>
+
+<nav class="navbar glass">
+    <div class="logo">Lizalise Buwa</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
     <h1>Lizalise Buwa</h1>
     <h2>Civil Engineering Graduate</h2>
     <p>
-        Motivated Civil Engineering graduate with experience in water supply systems,
-        road infrastructure, and structural design. Skilled in engineering software,
-        project coordination, and technical documentation.
+        Specialising in Water Infrastructure, Road Design and Structural Analysis
+        using advanced engineering software and digital systems.
     </p>
-
-    <div class="contact-info">
-        <div><i class="fas fa-phone"></i> 079 644 6958</div>
-        <div><i class="fas fa-envelope"></i> chriskamva@gmail.com</div>
-        <div><i class="fas fa-envelope"></i> 22360235@dut4life.ac.za</div>
-        <div><i class="fab fa-linkedin"></i> lizalise-buwa-bb244630a</div>
-        <div><i class="fas fa-globe"></i> kamva692.github.io/Portfolio-2</div>
-    </div>
 </section>
 
-<section class="container">
-    <h2 class="section-title">Key Competencies</h2>
-    <div class="card">
-        <ul>
-            <li>Water & Sanitation Project Support</li>
-            <li>Quantity Measurement & Costing Basics</li>
-            <li>Project Coordination & Reporting</li>
-            <li>Technical Documentation</li>
-            <li>Engineering Software Applications</li>
-        </ul>
-    </div>
-</section>
+<section id="projects" class="glass section">
+    <h2>Featured Projects</h2>
 
-<section class="container">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-
-        <div class="card">
-            <h3>Engineering Software</h3>
-            <span class="badge">AutoCAD 3D</span>
-            <span class="badge">Revit</span>
-            <span class="badge">Civil Designer</span>
-            <span class="badge">PROKON</span>
-            <span class="badge">Robot Structural Analysis</span>
+    <div class="slider">
+        <div class="slides">
+            <img src="https://via.placeholder.com/800x400/008080/ffffff?text=Water+Pipeline+Design">
+            <img src="https://via.placeholder.com/800x400/004d4d/ffffff?text=Road+Infrastructure">
+            <img src="https://via.placeholder.com/800x400/00b3b3/ffffff?text=Warehouse+Structure">
         </div>
-
-        <div class="card">
-            <h3>Project Tools</h3>
-            <span class="badge">Microsoft Project</span>
-            <span class="badge">Excel</span>
-            <span class="badge">Word</span>
-            <span class="badge">PowerPoint</span>
-        </div>
-
-        <div class="card">
-            <h3>Web & IT</h3>
-            <span class="badge">HTML</span>
-            <span class="badge">CSS</span>
-            <span class="badge">JavaScript</span>
-            <span class="badge">Full Stack Development</span>
-        </div>
-
     </div>
 </section>
 
-<section class="container">
-    <h2 class="section-title">Education</h2>
-
-    <div class="card">
-        <h3>Diploma in Civil Engineering and Technology</h3>
-        <p>Durban University of Technology</p>
-    </div>
-
-    <div class="card">
-        <h3>Full Stack Development Programme</h3>
-        <p>IT Varsity</p>
-    </div>
-
-    <div class="card">
-        <h3>National Senior Certificate</h3>
-        <p>St John’s College</p>
-    </div>
+<section id="contact" class="glass section">
+    <h2>Contact</h2>
+    <p>📞 079 644 6958</p>
+    <p>📧 chriskamva@gmail.com</p>
 </section>
 
-<section class="container">
-    <h2 class="section-title">Project Experience</h2>
+<!-- AI Assistant Button -->
+<div class="ai-button" onclick="alert('Hello 👋 I am Lizalise’s virtual assistant. Feel free to explore the portfolio!')">
+💬
+</div>
 
-    <div class="card">
-        <h3>Potable Water Pipeline Design</h3>
-        <p>Designed municipal water pipelines using Civil Designer including alignment, profiles and quantity outputs.</p>
-    </div>
-
-    <div class="card">
-        <h3>Road Infrastructure Design</h3>
-        <p>Completed horizontal & vertical alignment and documentation using Civil Designer.</p>
-    </div>
-
-    <div class="card">
-        <h3>Warehouse Structural Design</h3>
-        <p>Integrated planning, structural analysis and detailing using MS Project, Excel, PROKON, Robot and Revit.</p>
-    </div>
-</section>
-
-<section class="container">
-    <h2 class="section-title">Additional Information</h2>
-    <div class="card">
-        <p><strong>Languages:</strong> English, isiXhosa, isiZulu</p>
-        <p><strong>Driver’s Licence:</strong> Learner’s Licence</p>
-        <p><strong>Availability:</strong> Immediate</p>
-    </div>
-</section>
-
-<footer class="footer">
-    <p>© 2025 Lizalise Buwa | Civil Engineering Graduate</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
